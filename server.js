@@ -11,7 +11,7 @@ mongoose.connect(process.env.MONGODB_URI,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   }, () => {
-    console.log('mongodb connected...')
+    // console.log('mongodb connected...')
   });
 
 app.use(express.json());
@@ -23,6 +23,6 @@ app.use((error, req, res, next) => {
 })
 
 app.listen(PORT);
-console.log('listening on port', PORT);
+// console.log('listening on port', PORT);
 
 module.exports = app;
