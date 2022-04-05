@@ -67,3 +67,10 @@ it('PUT id does not exist /api/product/:productId', async () => {
   });
   expect(response.statusCode).toBe(404);
 });
+
+it('DELETE /api/product/:productId', async () => {
+  const response = await request(app).delete('/api/products/' + firstProduct._id);
+  expect(response.statusCode).toBe(200);
+  // expect(response.body.name).toBe(firstProduct.name);
+  // expect(response.body.description).toBe(firstProduct.description);
+})
