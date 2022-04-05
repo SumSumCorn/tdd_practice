@@ -10,10 +10,9 @@ mongoose.connect(process.env.MONGODB_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-  }, () => {
-    // console.log('mongodb connected...')
   });
-
+  // .then(() => console.log('MongoDb Connected...'))
+  // .catch(err => console.log(err));
 app.use(express.json());
 
 app.use('/api/products', productRoutes);
